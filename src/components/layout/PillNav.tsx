@@ -198,6 +198,24 @@ export const PillNav = ({
     setTimeout(() => router.push(href), 50);
   }, [pathname, router, setTransition]);
 
+    const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    const hamburger = hamburgerRef.current;
+    const menu = mobileMenuRef.current;
+    if (hamburger) {
+      const lines = hamburger.querySelectorAll('.hamburger-line');
+      gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease });
+      gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease });
+    }
+    if (menu) {
+      gsap.to(menu, {
+        opacity: 0, y: 10, scaleY: 1, duration: 0.2, ease,
+        transformOrigin: 'top center',
+        onComplete: () => gsap.set(menu, { visibility: 'hidden' }),
+      });
+    }
+  };
+
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
@@ -315,8 +333,8 @@ export const PillNav = ({
               <a
                 href={item.href}
                 className={`mobile-menu-link${pathname === item.href ? ' is-active' : ''}`}
-                onClick={(e) => {
-                  setIsMobileMenuOpen(false);
+                                onClick={(e) => {
+                  if (isMobileMenuOpen) closeMobileMenu();
                   handleNavigate(item.href, e);
                 }}
               >
@@ -329,3 +347,4 @@ export const PillNav = ({
     </div>
   );
 };
+

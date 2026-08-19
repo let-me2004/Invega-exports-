@@ -102,10 +102,15 @@ export const ScrollExpand = ({
     if (!frame || !media) return;
     const c = propsRef.current;
 
-    const e = smoothstep(0, 1, p);
+        const e = smoothstep(0, 1, p);
+    
+    // Responsive start dimensions
+    const isMobile = window.innerWidth < 768;
+    const effectiveStartWidth = isMobile ? 85 : c.startWidth;
+    const effectiveStartHeight = isMobile ? 65 : c.startHeight;
 
-    const w = c.startWidth + (100 - c.startWidth) * e;
-    const h = c.startHeight + (100 - c.startHeight) * e;
+    const w = effectiveStartWidth + (100 - effectiveStartWidth) * e;
+    const h = effectiveStartHeight + (100 - effectiveStartHeight) * e;
     const ix = Math.max(0, (100 - w) / 2);
     const iy = Math.max(0, (100 - h) / 2);
     const r = c.startRadius + (c.endRadius - c.startRadius) * e;
@@ -280,3 +285,4 @@ export const ScrollExpand = ({
     </div>
   );
 };
+

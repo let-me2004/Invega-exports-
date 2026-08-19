@@ -67,9 +67,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Massive Watermark Text */}
+                    {/* Massive Watermark Text */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex justify-center items-end pointer-events-none z-0 select-none overflow-hidden pb-4">
-            <span className="text-[14vw] font-black text-black/[0.03] tracking-tighter whitespace-nowrap leading-[0.75]">
+            <span className="premium-heading text-[8vw] md:text-[10vw] text-black/[0.03] whitespace-nowrap leading-none">
               INVEGA EXPORTS
             </span>
           </div>
@@ -79,3 +79,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

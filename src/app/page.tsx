@@ -28,7 +28,7 @@ export default function Home() {
           scrollHint="Scroll to explore"
           useWindowScroll
         >
-          <h2 className="text-5xl md:text-7xl lg:text-[7vw] premium-heading leading-tight text-white mb-6">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-[7vw] premium-heading leading-tight text-white mb-6 break-words hyphens-auto">
             MATHEMATICAL PRECISION
           </h2>
           <p className="text-white/80 max-w-4xl mx-auto text-base md:text-xl font-light text-white/80 leading-relaxed">
@@ -60,3 +60,4 @@ export default function Home() {
     </main>
   );
 }
+
