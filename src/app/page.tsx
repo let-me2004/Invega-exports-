@@ -1,69 +1,62 @@
-import Image from "next/image";
+'use client';
+import React from 'react';
+import dynamic from 'next/dynamic';
+import { ScrollExpand } from '@/components/animations/ScrollExpand';
+import { ProcessGrid } from '@/components/ProcessGrid';
+import { FooterCTA } from '@/components/FooterCTA';
+import { Footer } from '@/components/layout/Footer';
+import ExportAdvantages from '@/components/ExportAdvantages';
+
+const ScrollJourney = dynamic(
+  () => import('@/components/ScrollJourney').then((mod) => mod.ScrollJourney),
+  { ssr: false }
+);
+
+const SmoothScroll = dynamic(
+  () => import('@/components/SmoothScroll').then((mod) => mod.SmoothScroll),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-black text-white relative">
+      <SmoothScroll>
+        <ScrollExpand
+          src="/12028879_1920_1080_24fps.mp4"
+          mediaType="video"
+          title="BRIDGING BORDERS"
+          scrollHint="Scroll to explore"
+          useWindowScroll
+        >
+          <h2 className="text-5xl md:text-7xl lg:text-[7vw] premium-heading leading-tight text-white mb-6">
+            MATHEMATICAL PRECISION
+          </h2>
+          <p className="text-white/80 max-w-4xl mx-auto text-base md:text-xl font-light text-white/80 leading-relaxed">
+            Every pixel, everywhere. We move capital across borders with absolute certainty. From inland sourcing to oceanic transit.
           </p>
+        </ScrollExpand>
+
+        {/* Cinematic Transition Breather */}
+        <div className="w-full relative z-20 bg-black">
+          {/* Top Gradient: Fades the hard bottom edge of the video into black */}
+          <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-transparent via-black/80 to-black -translate-y-full pointer-events-none" />
+          
+          {/* Spacer content to give the user a visual rest before the next heavy animation */}
+          <div className="h-[25vh] flex items-center justify-center">
+            <div className="flex items-center gap-6 opacity-40">
+              <div className="w-16 h-[1px] bg-white"></div>
+              <span className="text-white text-xs tracking-[0.4em] uppercase font-bold">Supply Chain Engaged</span>
+              <div className="w-16 h-[1px] bg-white"></div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <ScrollJourney />
+        <ExportAdvantages />
+        <ProcessGrid />
+        <FooterCTA />
+        <Footer />
+      </SmoothScroll>
+    </main>
   );
 }

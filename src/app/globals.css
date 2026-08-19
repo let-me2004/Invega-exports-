@@ -1,26 +1,91 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* White and Blue Theme */
+  --color-invega-dark: #000000;
+  --color-invega-darker: #0a0a0a;
+  --color-invega-blue: #000000;
+  --color-invega-gold: #ffffff;
+  --color-invega-gold-dim: rgba(255, 255, 255, 0.4);
+  --color-invega-glass: rgba(255, 255, 255, 0.05);
+  --color-invega-glass-border: rgba(255, 255, 255, 0.2);
+  --color-invega-text: #ffffff;
+  --color-invega-text-dim: rgba(255, 255, 255, 0.7);
+  --color-invega-success: #ffffff;
+  
+  --font-display: var(--font-display, 'Inter', sans-serif);
+  --font-body: var(--font-body, 'Inter', sans-serif);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background-color: var(--color-invega-darker);
+  color: var(--color-invega-text);
+  font-family: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-invega-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Typography Utility for Premium Headings */
+.premium-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* Diamond Indicator Component */
+.diamond-indicator {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #000000;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.diamond-indicator span {
+  transform: rotate(-45deg);
+  font-size: 11px;
+  letter-spacing: 0;
+  font-weight: 800;
+}
+
+/* Circular Arrow Button */
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  color: var(--color-invega-darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+.circle-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
