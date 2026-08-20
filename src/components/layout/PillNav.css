@@ -1,5 +1,5 @@
 .pill-nav-container {
-  position: absolute;
+  position: fixed;
   top: 1em;
   left: 50%;
   transform: translateX(-50%);
@@ -115,7 +115,7 @@
 }
 
 .pill .hover-circle {
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 0;
   border-radius: 50%;
@@ -142,7 +142,7 @@
 }
 
 .pill .pill-label-hover {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   color: var(--hover-text, #fff);
@@ -153,7 +153,7 @@
 
 .pill.is-active::after {
   content: '';
-  position: absolute;
+  position: fixed;
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
@@ -215,7 +215,7 @@
 }
 
 .mobile-menu-popover {
-  position: absolute;
+  position: fixed;
   top: 4.5em;
   left: 1rem;
   right: 1rem;
@@ -256,6 +256,7 @@
   background-color: var(--hover-bg, #0033a0);
   color: var(--hover-text, #fff);
 }
+
 
 
 
