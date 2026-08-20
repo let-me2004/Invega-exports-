@@ -36,7 +36,7 @@ export default function FoundersPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Header */}
-        <div className="mb-32 reveal-block">
+        <div className="mb-32">
           <div className="w-12 h-1 bg-white mb-8"></div>
           <h1 className="premium-heading text-4xl md:text-6xl lg:text-[5vw] tracking-[0.1em] mb-8 leading-tight">
             THE ARCHITECTS
@@ -141,6 +141,8 @@ export default function FoundersPage() {
     </main>
   );
 }
+
+
 
 
 
