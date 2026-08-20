@@ -48,12 +48,12 @@ export default function FoundersPage() {
 
         {/* The Founders Grid */}
         <div className="grid md:grid-cols-2 gap-16 md:gap-8 mb-32">
-                                                            {/* Founder 1 */}
+                                                                      {/* Founder 1 */}
           <div className="group reveal-block border-t border-white/20 pt-8">
             <h2 className="premium-heading text-2xl md:text-3xl tracking-widest mb-6 group-hover:text-[#737373] transition-colors duration-500">
               ANUKALP
             </h2>
-            <div className="w-full mb-8 relative bg-[#0a0a0a]">
+            <div className="w-full aspect-[3/4] md:aspect-[5/8] mb-8 relative bg-[#0a0a0a]">
               <GlareHover
                 width="100%"
                 height="100%"
@@ -67,7 +67,7 @@ export default function FoundersPage() {
                 <img 
                   src="/pictures/anukalp.png" 
                   alt="Anukalp" 
-                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 
@@ -77,7 +77,7 @@ export default function FoundersPage() {
                 </div>
 
                 {/* Name Tag / Watermark Cover */}
-                <div className="absolute bottom-0 right-0 bg-[#0a0a0a] border-t border-l border-white/10 px-8 py-4 pointer-events-none z-30">
+                <div className="absolute bottom-0 right-0 bg-[#0a0a0a] border-t border-l border-white/10 px-8 pt-8 pb-4 pointer-events-none z-30">
                   <span className="premium-heading text-white text-xs tracking-[0.3em] uppercase">Anukalp</span>
                 </div>
               </GlareHover>
@@ -87,12 +87,12 @@ export default function FoundersPage() {
             </p>
           </div>
 
-                                                            {/* Founder 2 */}
+                                                                      {/* Founder 2 */}
           <div className="group reveal-block border-t border-white/20 pt-8">
             <h2 className="premium-heading text-2xl md:text-3xl tracking-widest mb-6 group-hover:text-[#737373] transition-colors duration-500">
               ISHAAN
             </h2>
-            <div className="w-full mb-8 relative bg-[#0a0a0a]">
+            <div className="w-full aspect-[3/4] md:aspect-[5/8] mb-8 relative bg-[#0a0a0a]">
               <GlareHover
                 width="100%"
                 height="100%"
@@ -106,7 +106,7 @@ export default function FoundersPage() {
                 <img 
                   src="/pictures/ishaan.jpeg" 
                   alt="Ishaan" 
-                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 
@@ -116,7 +116,7 @@ export default function FoundersPage() {
                 </div>
 
                 {/* Name Tag */}
-                <div className="absolute bottom-0 right-0 bg-[#0a0a0a] border-t border-l border-white/10 px-8 py-4 pointer-events-none z-30">
+                <div className="absolute bottom-0 right-0 bg-[#0a0a0a] border-t border-l border-white/10 px-8 pt-10 pb-4 pointer-events-none z-30">
                   <span className="premium-heading text-white/50 text-xs tracking-[0.3em] uppercase">Ishaan</span>
                 </div>
               </GlareHover>
@@ -141,6 +141,7 @@ export default function FoundersPage() {
     </main>
   );
 }
+
 
 
 
