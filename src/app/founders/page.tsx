@@ -104,7 +104,7 @@ export default function FoundersPage() {
                 transitionDuration={800}
               >
                 <img 
-                  src="/pictures/ishaan.jpeg" 
+                  src="/pictures/ishaan.PNG" 
                   alt="Ishaan" 
                   className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                 />
@@ -141,6 +141,7 @@ export default function FoundersPage() {
     </main>
   );
 }
+
 
 
 
