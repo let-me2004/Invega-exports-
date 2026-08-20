@@ -87,12 +87,12 @@ export default function FoundersPage() {
             </p>
           </div>
 
-                                                  {/* Founder 2 */}
+                                                            {/* Founder 2 */}
           <div className="group reveal-block border-t border-white/20 pt-8">
             <h2 className="premium-heading text-2xl md:text-3xl tracking-widest mb-6 group-hover:text-[#737373] transition-colors duration-500">
-              FOUNDER 02
+              ISHAAN
             </h2>
-            <div className="w-full aspect-[9/16] mb-8 relative bg-[#0a0a0a]">
+            <div className="w-full mb-8 relative bg-[#0a0a0a]">
               <GlareHover
                 width="100%"
                 height="100%"
@@ -103,7 +103,12 @@ export default function FoundersPage() {
                 glareOpacity={0.15}
                 transitionDuration={800}
               >
-                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <img 
+                  src="/pictures/ishaan.jpeg" 
+                  alt="Ishaan" 
+                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 
                 {/* Global Logistics Tag */}
                 <div className="absolute bottom-4 left-4 pointer-events-none z-20">
@@ -112,7 +117,7 @@ export default function FoundersPage() {
 
                 {/* Name Tag */}
                 <div className="absolute bottom-0 right-0 bg-[#0a0a0a] border-t border-l border-white/10 px-8 py-4 pointer-events-none z-30">
-                  <span className="premium-heading text-white/50 text-xs tracking-[0.3em] uppercase">Partner</span>
+                  <span className="premium-heading text-white/50 text-xs tracking-[0.3em] uppercase">Ishaan</span>
                 </div>
               </GlareHover>
             </div>
@@ -136,6 +141,7 @@ export default function FoundersPage() {
     </main>
   );
 }
+
 
 
 
