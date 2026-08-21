@@ -1,4 +1,4 @@
-'use client';
+ï»¿'use client';
 import React, { useRef } from 'react';
 import GlareHover from '@/components/animations/GlareHover';
 import { useGSAP } from '@gsap/react';
@@ -163,7 +163,7 @@ export default function FoundersPage() {
               <h3 className="premium-heading text-2xl md:text-4xl tracking-widest mb-6 leading-relaxed">
                 "WE AREN'T JUST MOVING CONTAINERS. WE ARE RE-ENGINEERING HOW COMMERCE FLOWS ACROSS BORDERS."
               </h3>
-              <p className="text-[#737373] tracking-[0.2em] text-xs md:text-sm uppercase">— The Founders</p>
+              <p className="text-[#737373] tracking-[0.2em] text-xs md:text-sm uppercase">&mdash; The Founders</p>
             </div>
 
           </div>
