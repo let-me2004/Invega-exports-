@@ -28,12 +28,14 @@ export default function Home() {
           scrollHint="Scroll to explore"
           useWindowScroll
         >
-          <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-[7vw] premium-heading leading-tight text-white mb-6 break-words hyphens-auto">
-            MATHEMATICAL PRECISION
-          </h2>
-          <p className="text-white/80 max-w-4xl mx-auto text-base md:text-xl font-light text-white/80 leading-relaxed">
-            Every pixel, everywhere. We move capital across borders with absolute certainty. From inland sourcing to oceanic transit.
-          </p>
+          <div className="px-4 md:px-0">
+            <h2 className="text-[1.75rem] sm:text-5xl md:text-7xl lg:text-[7vw] premium-heading leading-tight text-white mb-4 md:mb-6 tracking-[0.1em]">
+              MATHEMATICAL PRECISION
+            </h2>
+            <p className="text-white/80 max-w-4xl mx-auto text-sm md:text-xl font-light leading-relaxed">
+              Every pixel, everywhere. We move capital across borders with absolute certainty. From inland sourcing to oceanic transit.
+            </p>
+          </div>
         </ScrollExpand>
 
         {/* Cinematic Transition Breather */}
@@ -42,11 +44,11 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-transparent via-black/80 to-black -translate-y-full pointer-events-none" />
           
           {/* Spacer content to give the user a visual rest before the next heavy animation */}
-          <div className="h-[25vh] flex items-center justify-center">
-            <div className="flex items-center gap-6 opacity-40">
-              <div className="w-16 h-[1px] bg-white"></div>
-              <span className="text-white text-xs tracking-[0.4em] uppercase font-bold">Supply Chain Engaged</span>
-              <div className="w-16 h-[1px] bg-white"></div>
+          <div className="h-[20vh] md:h-[25vh] flex items-center justify-center">
+            <div className="flex items-center gap-4 md:gap-6 opacity-40">
+              <div className="w-8 md:w-16 h-[1px] bg-white"></div>
+              <span className="text-white text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.4em] uppercase font-bold text-center">Supply Chain Engaged</span>
+              <div className="w-8 md:w-16 h-[1px] bg-white"></div>
             </div>
           </div>
         </div>
@@ -60,4 +62,3 @@ export default function Home() {
     </main>
   );
 }
-

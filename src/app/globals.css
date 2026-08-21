@@ -18,6 +18,7 @@
 }
 
 html, body {
+  overflow-x: hidden;
   background-color: var(--color-invega-darker);
   color: var(--color-invega-text);
   font-family: var(--font-body);
@@ -89,3 +90,4 @@ html, body {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
