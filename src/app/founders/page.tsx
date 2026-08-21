@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import GlareHover from '@/components/animations/GlareHover';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -15,19 +15,19 @@ export default function FoundersPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // 1. Initial Page Load Animation for Header
-    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+    // Wait for the page transition curtain to finish (approx 0.8s)
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' }, delay: 0.8 });
 
     tl.fromTo(
       '.founder-header-line',
       { scaleX: 0, transformOrigin: 'left' },
-      { scaleX: 1, duration: 1, delay: 0.2 }
+      { scaleX: 1, duration: 1 }
     );
 
     tl.fromTo(
-      '.founder-title',
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1 },
+      '.founder-title-text',
+      { y: '110%' },
+      { y: '0%', duration: 1.2 },
       "-=0.6"
     );
 
@@ -35,7 +35,7 @@ export default function FoundersPage() {
       '.founder-subtitle',
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 1 },
-      "-=0.6"
+      "-=0.8"
     );
 
     // 2. Scroll-Triggered Animations
@@ -65,10 +65,14 @@ export default function FoundersPage() {
             {/* Header */}
             <div className="mb-24 md:mb-32">
               <div className="founder-header-line w-12 h-1 bg-white mb-8"></div>
-              <h1 className="founder-title premium-heading text-4xl md:text-6xl lg:text-[5vw] tracking-[0.1em] mb-8 leading-tight">
-                THE ARCHITECTS
+              
+              <h1 className="premium-heading text-4xl md:text-6xl lg:text-[5vw] tracking-[0.1em] mb-8 leading-tight overflow-hidden pb-2">
+                <span className="block founder-title-text transform translate-y-[110%]">
+                  THE ARCHITECTS
+                </span>
               </h1>
-              <p className="founder-subtitle text-lg md:text-2xl text-[#737373] font-light max-w-3xl leading-relaxed">
+              
+              <p className="founder-subtitle text-lg md:text-2xl text-[#737373] font-light max-w-3xl leading-relaxed opacity-0">
                 Two engineers. Same major. One shared vision: to strip the latency and black-box mechanics out of global trade through mathematical precision.
               </p>
             </div>
@@ -170,4 +174,3 @@ export default function FoundersPage() {
     </main>
   );
 }
-
