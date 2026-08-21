@@ -15,11 +15,7 @@ export const PolaroidStack = () => {
       {images.map((img, i) => (
         <div 
           key={i}
-          className={elative group w-24 h-32 md:w-40 md:h-52 lg:w-48 lg:h-64 bg-[#f4f4f4] p-1.5 md:p-2 lg:p-3 pb-6 md:pb-10 lg:pb-14 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] 
-            \ \ \
-            hover:!z-50 hover:!scale-110 hover:!rotate-0 hover:!-translate-y-8 cursor-pointer
-            -mx-3 md:mx-0 /* Overlap on mobile */
-          }
+          className={`relative group w-24 h-32 md:w-40 md:h-52 lg:w-48 lg:h-64 bg-[#f4f4f4] p-1.5 md:p-2 lg:p-3 pb-6 md:pb-10 lg:pb-14 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${img.rot} ${img.y} ${img.mobHide} hover:!z-50 hover:!scale-110 hover:!rotate-0 hover:!-translate-y-8 cursor-pointer -mx-3 md:mx-0`}
           style={{
             transformOrigin: 'center center',
             boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)'
