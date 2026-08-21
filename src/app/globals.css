@@ -18,7 +18,8 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip; max-width: 100vw;
+  
   background-color: var(--color-invega-darker);
   color: var(--color-invega-text);
   font-family: var(--font-body);
@@ -90,4 +91,6 @@ html, body {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+
 

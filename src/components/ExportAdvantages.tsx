@@ -23,10 +23,10 @@ export default function ExportAdvantages() {
       </div>
 
       <div className="relative z-10">
-        <ScrollStack useWindowScroll={true} itemDistance={150} stackPosition="15%">
+        <ScrollStack useWindowScroll={true} itemDistance={150} stackPosition="20%">
           
           <ScrollStackItem itemClassName="bg-white text-black border border-black/10">
-            <div className="flex flex-col h-full justify-center">
+            <div className="flex flex-col h-full justify-center pt-20 md:pt-0">
               <span className="text-xs font-bold tracking-[0.2em] text-[#737373] mb-4 uppercase">01 // Financial Engineering</span>
               <h2 className="text-4xl md:text-5xl premium-heading mb-6">Zero Embedded Taxes</h2>
               <p className="text-xl leading-relaxed text-[#737373] font-light">
@@ -36,7 +36,7 @@ export default function ExportAdvantages() {
           </ScrollStackItem>
 
           <ScrollStackItem itemClassName="bg-black text-white border border-white/20">
-            <div className="flex flex-col h-full justify-center">
+            <div className="flex flex-col h-full justify-center pt-20 md:pt-0">
               <span className="text-xs font-bold tracking-[0.2em] text-[#737373] mb-4 uppercase">02 // Supply Chain Agility</span>
               <h2 className="text-4xl md:text-5xl premium-heading mb-6">Agile Supply Chain</h2>
               <p className="text-xl leading-relaxed text-[#737373] font-light">
@@ -46,7 +46,7 @@ export default function ExportAdvantages() {
           </ScrollStackItem>
 
           <ScrollStackItem itemClassName="bg-white text-black border border-black/10">
-            <div className="flex flex-col h-full justify-center">
+            <div className="flex flex-col h-full justify-center pt-20 md:pt-0">
               <span className="text-xs font-bold tracking-[0.2em] text-[#737373] mb-4 uppercase">03 // Global Quality</span>
               <h2 className="text-4xl md:text-5xl premium-heading mb-6">Global Materials</h2>
               <p className="text-xl leading-relaxed text-[#737373] font-light">
@@ -56,7 +56,7 @@ export default function ExportAdvantages() {
           </ScrollStackItem>
 
           <ScrollStackItem itemClassName="bg-black text-white border border-white/20">
-            <div className="flex flex-col h-full justify-center">
+            <div className="flex flex-col h-full justify-center pt-20 md:pt-0">
               <span className="text-xs font-bold tracking-[0.2em] text-[#737373] mb-4 uppercase">04 // Compliance</span>
               <h2 className="text-4xl md:text-5xl premium-heading mb-6">100% Reliability</h2>
               <p className="text-xl leading-relaxed text-[#737373] font-light">
