@@ -4,17 +4,17 @@ import { PolaroidStack } from '@/components/animations/PolaroidStack';
 export const Footer = () => {
   return (
     <footer 
-      className="relative w-full bg-black md:clip-path-polygon"
+      className="relative w-full bg-black"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="relative w-full h-auto md:h-[90vh] md:min-h-[700px]">
-        <div className="md:fixed bottom-0 left-0 w-full h-auto md:h-[90vh] md:min-h-[700px] bg-white text-black rounded-t-[40px] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] flex flex-col overflow-hidden relative">
+      <div className="relative w-full h-[90vh] min-h-[700px]">
+        <div className="fixed bottom-0 left-0 w-full h-[90vh] min-h-[700px] bg-white text-black rounded-t-[40px] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] flex flex-col overflow-y-auto hide-scrollbar">
           
-          <div className="w-full relative z-20 pt-12 md:pt-8 pb-4">
+          <div className="w-full relative z-20 pt-8 pb-4">
             <PolaroidStack />
           </div>
 
-          <div className="w-full flex-1 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 px-6 md:px-12 z-10 relative pb-12 md:pb-0">
+          <div className="w-full flex-1 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-12 z-10 relative">
             
             {/* Brand */}
             <div className="md:col-span-1">
@@ -23,8 +23,8 @@ export const Footer = () => {
                 A tech-driven merchant exporter based in India, facilitating seamless global trade with mathematical precision.
               </p>
               <div className="flex gap-4 font-bold text-xs uppercase tracking-widest">
-                <a href="#" className="text-black hover:text-[#737373] transition-colors">LinkedIn</a>
-                <a href="#" className="text-black hover:text-[#737373] transition-colors">Twitter</a>
+                <a href="https://www.linkedin.com/company/invega-exports/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#737373] transition-colors">LinkedIn</a>
+                <a href="https://www.instagram.com/invega.exports?igsi=N3A2aHMwZmdkdTdw" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#737373] transition-colors">Instagram</a>
               </div>
             </div>
 
@@ -53,17 +53,17 @@ export const Footer = () => {
             <div>
               <h4 className="text-black font-bold tracking-[0.2em] uppercase mb-4 text-xs">Reach Out</h4>
               <ul className="space-y-4 font-light text-[#737373] text-sm md:text-base">
-                <li>Mumbai, India</li>
-                <li><a href="mailto:contact@invegaexports.com" className="hover:text-black transition-colors">contact@invegaexports.com</a></li>
+                <li>Delhi, India</li>
+                <li><a href="mailto:consult.invegaexports@gmail.com" className="hover:text-black transition-colors">consult.invegaexports@gmail.com</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="w-full max-w-7xl mx-auto pb-12 md:pb-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs z-10 font-bold tracking-widest uppercase border-t border-black/10 pt-8 mt-4 md:mt-12 text-[#737373]">
+          <div className="w-full max-w-7xl mx-auto pb-8 md:pb-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs z-10 font-bold tracking-widest uppercase border-t border-black/10 pt-6 mt-4 text-[#737373]">
             <p className="text-center md:text-left">&copy; {new Date().getFullYear()} Invega Exports. All rights reserved.</p>
             <div className="flex gap-4 md:gap-6">
-              <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
+              <a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-black transition-colors">Terms of Service</a>
             </div>
           </div>
 
