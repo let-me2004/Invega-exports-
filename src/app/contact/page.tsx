@@ -63,8 +63,7 @@ export default function ContactPage() {
             <div>
               <h2 className="premium-heading text-sm tracking-[0.2em] text-[#737373] mb-4">DIRECT INQUIRIES</h2>
               <p className="text-white/80 text-sm leading-relaxed">
-                trade@invegaexports.com<br/>
-                +91 (11) 4567 8900
+                consult.invegaexports@gmail.com
               </p>
             </div>
           </div>
@@ -152,3 +151,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
