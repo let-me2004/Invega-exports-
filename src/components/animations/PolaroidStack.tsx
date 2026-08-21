@@ -11,11 +11,11 @@ const images = [
 
 export const PolaroidStack = () => {
   return (
-    <div className="w-full flex justify-start md:justify-center items-center gap-6 md:gap-6 lg:gap-10 pt-12 pb-16 px-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scrollbar">
+    <div className="w-full flex justify-center items-center gap-0 md:gap-6 lg:gap-10 pt-4 pb-16 px-4">
       {images.map((img, i) => (
         <div 
           key={i}
-          className={`relative group shrink-0 snap-center w-[6rem] h-32 sm:w-28 sm:h-36 md:w-40 md:h-52 lg:w-48 lg:h-64 bg-[#f4f4f4] p-1.5 sm:p-2 md:p-2 lg:p-3 pb-6 sm:pb-8 md:pb-10 lg:pb-14 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${img.rot} ${img.y} hover:!z-50 hover:!scale-110 hover:!rotate-0 hover:!-translate-y-8 cursor-pointer`}
+          className={`relative group w-16 h-24 sm:w-24 sm:h-32 md:w-40 md:h-52 lg:w-48 lg:h-64 bg-[#f4f4f4] p-1 sm:p-1.5 md:p-2 lg:p-3 pb-4 sm:pb-6 md:pb-10 lg:pb-14 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${img.rot} ${img.y} hover:!z-50 hover:!scale-110 hover:!rotate-0 hover:!-translate-y-8 cursor-pointer -mx-3 sm:-mx-2 md:mx-0`}
           style={{
             transformOrigin: 'center center',
             boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)'
@@ -29,7 +29,7 @@ export const PolaroidStack = () => {
               className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
             />
           </div>
-          <div className="absolute bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-5 left-0 w-full text-center text-[7px] sm:text-[8px] md:text-[10px] lg:text-xs text-black/60 uppercase tracking-[0.25em] font-semibold truncate px-1">
+          <div className="absolute bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-5 left-0 w-full text-center text-[5px] sm:text-[6px] md:text-[10px] lg:text-xs text-black/60 uppercase tracking-[0.25em] font-semibold truncate px-1">
             {img.label}
           </div>
         </div>
