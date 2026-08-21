@@ -14,20 +14,22 @@ export const ChapterTwo: React.FC<ChapterProps> = ({ scrollProgress }) => {
       <div className="flex justify-between items-start w-full reveal-text">
         <div>
           <h2 className="premium-heading text-sm text-white/50 tracking-[0.2em] mb-2">PHASE I</h2>
-          <h1 className="premium-heading text-2xl text-white tracking-[0.1em]">THE FIRST MILE</h1>
+          <h1 className="premium-heading text-lg md:text-2xl text-white tracking-[0.1em]">THE FIRST MILE</h1>
         </div>
         <div className="diamond-indicator"><span>1</span></div>
       </div>
 
       <div className="flex flex-col items-start justify-center flex-1 w-full max-w-7xl w-full mx-auto">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.2] premium-heading mb-6 reveal-text">
+        <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.2] premium-heading mb-6 reveal-text">
           PRECISION SOURCING<br/>AT THE ORIGIN.
         </h2>
-        <p className="text-white/70 text-base md:text-lg tracking-wide leading-relaxed max-w-3xl reveal-text">
+        <p className="text-white/70 text-sm md:text-lg tracking-wide leading-relaxed max-w-3xl reveal-text">
           Before a vessel ever leaves the port, the journey begins inland. We orchestrate heavy transport from factory floors and agricultural heartlands, ensuring your cargo is secured, tracked, and loaded with mathematical precision.
         </p>
       </div>
     </div>
   );
 };
+
+
 

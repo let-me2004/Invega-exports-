@@ -17,7 +17,7 @@ export const ChapterOne: React.FC<ChapterOneProps> = ({ scrollProgress, geoData 
       <div className="flex justify-between items-start w-full reveal-text">
         <div>
           <h2 className="premium-heading text-sm text-white/50 tracking-[0.2em] mb-2">INVEGA EXPORTS</h2>
-          <h1 className="premium-heading text-2xl text-white tracking-[0.1em]">THE JOURNEY</h1>
+          <h1 className="premium-heading text-lg md:text-2xl text-white tracking-[0.1em]">THE JOURNEY</h1>
         </div>
         <div className="diamond-indicator"><span>0</span></div>
       </div>
@@ -59,4 +59,6 @@ export const ChapterOne: React.FC<ChapterOneProps> = ({ scrollProgress, geoData 
     </div>
   );
 };
+
+
 
