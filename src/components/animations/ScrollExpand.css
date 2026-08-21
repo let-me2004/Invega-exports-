@@ -70,6 +70,7 @@
 }
 
 .scroll-expand__title {
+  padding-top: 4rem; /* Clear fixed nav */
   position: absolute;
   inset: 0;
   display: flex;
@@ -102,3 +103,4 @@
   pointer-events: none;
   will-change: opacity, transform;
 }
+

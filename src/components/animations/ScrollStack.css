@@ -4,10 +4,16 @@
 }
 
 .scroll-stack-inner {
-  padding: 10vh 5vw 30rem;
+  padding: 5vh 5vw 15rem;
   min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .scroll-stack-inner {
+    padding: 10vh 5vw 30rem;
+  }
 }
 
 .scroll-stack-card-wrapper {
@@ -23,13 +29,19 @@
   min-height: 25rem;
   width: 100%;
   margin: 30px 0;
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 40px;
   box-sizing: border-box;
   /* Improve mobile performance */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .scroll-stack-card {
+    padding: 4rem;
+  }
 }
 
 .scroll-stack-end {
